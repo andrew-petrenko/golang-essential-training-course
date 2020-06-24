@@ -23,4 +23,16 @@ func Maps() {
 	}
 
 	stocks["TSLA"] = 322.12
+	fmt.Println(stocks)
+
+	delete(stocks, "AMZN")
+	fmt.Println(stocks)
+
+	for key := range stocks {
+		fmt.Println(key)
+	}
+
+	for key, value := range stocks {
+		fmt.Printf("%s -> %.2f\n", key, value)
+	}
 }
